@@ -16,7 +16,7 @@ set(CORE_FUNCTION_FILES
     PARENT_SCOPE)
 
 # https://learn.microsoft.com/en-us/cpp/build/reference/ob-inline-function-expansion?view=msvc-170 
-# Lower funcitons inlining, /Ob2 causes ICE on ARM64 (both cross-compile and native):
+# Lower functions inlining, /Ob2 causes ICE with ARM64 toolchain (both cross-compile and native):
 # error MSB6006: "CL.exe" exited with code -529706956
 if (MSVC AND (CMAKE_VS_PLATFORM_NAME STREQUAL "ARM64"))
   set_source_files_properties(ub_duckdb_core_functions_date PROPERTIES COMPILE_OPTIONS /Ob1)
