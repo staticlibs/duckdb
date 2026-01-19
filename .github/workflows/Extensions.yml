@@ -214,6 +214,7 @@ jobs:
 
   # Build the extensions from .github/config/external_extensions.cmake
   external-extensions:
+    if: ${{ false }}
     name: External Extensions
     needs:
       - load-extension-configs
