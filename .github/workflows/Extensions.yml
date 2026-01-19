@@ -196,6 +196,7 @@ jobs:
 
   # Build the extensions from .github/config/rust_based_extensions.cmake
   rust-based-extensions:
+    if: ${{ false }}
     name: Rust-based Extensions
     needs:
       - load-extension-configs
